@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Gestion Chaudsons | Ajout article</title>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <img src="image/icons/logo.png" alt="" title="">
+        <h1>Formulaire d'ajout d'article</h1>
+        <div>
+            <span>Admin</span>
+            <img src="image/icons/compte.svg" alt="" title="">
+        </div>
+    </header>
+    <main>
+        <nav class="sidebar">
+            <a class="active" href="index.html">
+                <span>Articles</span>
+                <img src="image/icons/package.svg" alt="" title="">
+            </a>
+            <a href="#">
+                <span>Clients</span>
+                <img src="image/icons/clients.svg" alt="" title="">               
+            </a>
+            <a href="#">
+                <span>Personnel</span>
+                <img src="image/icons/personnel.svg" alt="" title="">
+            </a>
+            <a href="#">
+                <span>Livraisons</span>
+                <img src="image/icons/delivery.svg" alt="" title="">
+            </a>
+            <a href="#">
+                <span>Offres</span>
+                <img src="image/icons/discount.svg" alt="" title="">
+            </a>
+            <a href="#" class="settings">
+                <span>Paramètres</span>
+                <img src="image/icons/settings.svg" alt="" title="">
+            </a>        
+        </nav>
+        <div class="content">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Gestion du site</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Articles</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
+                </ol>
+            </nav>
+            <div class="container-fluid">
+                <form>
+                    <div class="row">
+                        <div class="col-10 ajout_article">
+                            <div class="row">
+                                <!-- Texte -->
+                                <div class="col-4">
+                                    <div>
+                                        <label for="name">Nom de l'article</label><br/>
+                                        <input type="text" id="name" name="name" required autocomplete="off"/>                                      
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <label for="description">Description</label><br/>
+                                        <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <p>Catégorie(s)</p>
+                                        <input type="checkbox" id="categoryChoice1" name="categoryChoice1"/>
+                                        <label for="categoryChoice1">Adultes</label><br/>
+                                        <input type="checkbox" id="categoryChoice2" name="categoryChoice2"/>
+                                        <label for="categoryChoice2">Enfants</label><br/>
+                                        <input type="checkbox" id="categoryChoice3" name="categoryChoice3"/>
+                                        <label for="categoryChoice3">Chauffants</label><br/>
+                                    </div>
+                                </div>
+                                <!-- Apparence -->
+                                <div class="col-4">
+                                    <div>
+                                        <label for="article_image_principale">Image principale :</label><br/>
+                                        <input type="file" id="article_image_principale" name="article_image_principale" accept="image/png, image/jpeg" required/>
+                                        <label for="article_images">Image(s) additionnel(s) :</label><br/>
+                                        <input type="file" id="article_images" name="article_images" accept="image/png, image/jpeg" multiple/>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <p>Couleur(s)</p>
+                                        <input type="checkbox" id="colorChoice1" name="colorChoice1"/>
+                                        <label for="colorChoice1">Bleu</label><br/>
+                                        <input type="checkbox" id="colorChoice2" name="colorChoice2"/>
+                                        <label for="colorChoice2">Noir</label><br/>
+                                        <input type="checkbox" id="colorChoice3" name="colorChoice3"/>
+                                        <label for="colorChoice3">Gris</label><br/>
+                                    </div>
+                                </div>
+                                <!-- Données -->
+                                <div class="col-4">
+                                    <div>
+                                        <label for="prix">Prix</label><br/>
+                                        <input type="number" id="prix" name="prix" min="0.01" step="0.01" required autocomplete="off"/>
+                                        <span>€</span>
+                                        <br/>
+                                        <input type="checkbox" id="discount" name="discount"/>
+                                        <label for="discount">En Promotion</label><br/>
+                                        <label for="discount_amount">Réduction :</label><br/>
+                                        <input type="number" id="discount_amount" name="discount_amount" step="1"/>
+                                        <span>%</span>
+                                        <br/>
+                                        <label for="prix_discount">Prix après réduction :</label><br/>
+                                        <input type="number" value="0" id="prix_discount" name="prix_discount" min="0.01" step="0.01" disabled/>
+                                        <br/><hr>
+                                        <input type="radio" id="online" name="product_status" value="online">
+                                        <label for="online">En ligne</label><br>
+                                        <input type="radio" id="offline" name="product_status" value="offline">
+                                        <label for="offline">Hors Ligne</label><br>
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" value="Ajouter" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

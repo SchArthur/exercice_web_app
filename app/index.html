@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Gestion Chaudsons | Produits</title>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center">
+        <img src="image/icons/logo.png" alt="" title="">
+        <h1>Listing des produits</h1>
+        <div>
+            <span>Admin</span>
+            <img src="image/icons/compte.svg" alt="" title="">
+        </div>
+    </header>
+    <main>
+        <nav class="sidebar">
+            <a class="active" href="index.html">
+                <span>Articles</span>
+                <img src="image/icons/package.svg" alt="" title="">
+            </a>
+            <a href="#">
+                <span>Clients</span>
+                <img src="image/icons/clients.svg" alt="" title="">               
+            </a>
+            <a href="#">
+                <span>Personnel</span>
+                <img src="image/icons/personnel.svg" alt="" title="">
+            </a>
+            <a href="#">
+                <span>Livraisons</span>
+                <img src="image/icons/delivery.svg" alt="" title="">
+            </a>
+            <a href="#">
+                <span>Offres</span>
+                <img src="image/icons/discount.svg" alt="" title="">
+            </a>
+            <a href="#" class="settings">
+                <span>Paramètres</span>
+                <img src="image/icons/settings.svg" alt="" title="">
+            </a>        
+        </nav>
+        <div class="content">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Gestion du site</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Articles</li>
+                </ol>
+            </nav>
+            <div>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row search_row">
+                            <div class="col-3 search_col">
+                                <div>
+                                    <input type="checkbox" id="online_article" name="online_article">
+                                    <label for="online_article">Article en ligne</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="discount_article" name="discount_article">
+                                    <label for="discount_article">Article en promo</label>
+                                </div>
+                            </div>
+                            <div class="col-3 search_col">
+                                <div>
+                                    <input type="search" id="article_name" name="article_name">
+                                    <label for="article_name">Nom de l'article</label>
+                                </div>
+                            </div>
+                            <div class="col-3 search_col">
+                                <div>
+                                    <input type="month" id="article_date" name="article_date">
+                                    <label for="article_date">Date de mise en ligne</label>                   
+                                </div>
+                                <div>
+                                    <label for="article_categories">Catégorie</label>
+                                    <select name="article_categories" id="article_categories">
+                                        <option value="Adulte">Adulte</option>
+                                        <option value="Enfants">Enfants</option>
+                                        <option value="Chauffants">Chauffants</option>
+                                        <option value="Chaussettes">Chaussettes</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="article_couleurs">Couleur</label>
+                                    <select name="article_couleurs" id="article_couleurs">
+                                        <option value="Bleu">Bleu</option>
+                                        <option value="Rouge">Rouge</option>
+                                        <option value="Blanc">Blanc</option>
+                                        <option value="Gris">Gris</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-3 search_col">
+                                <div class="search_submit">
+                                    <a class="btn btn-primary" href="ajout.html" role="button"><div>Ajouter un article</div></a>
+                                    <input type="submit" value="Lancer la recherche" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Promotion</th>
+                        <th scope="col">Prix après réduction</th>
+                        <th scope="col">Catégorie(s)</th>
+                        <th scope="col">Couleurs(s)</th>
+                        <th scope="col">État</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Chaussons</td>
+                        <td>25,99€</td>
+                        <td>-20%</td>
+                        <td>20,79€</td>
+                        <td>Adulte</td>
+                        <td>Bleu</td>
+                        <td>En ligne</td>
+                        <td>
+                            <a href="#">
+                                <img src="image/icons/detail.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="image/icons/edit.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="image/icons/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Chaussons hauts</td>
+                        <td>35,99€</td>
+                        <td>    </td>
+                        <td>    </td>
+                        <td>Adulte</td>
+                        <td>Rouge</td>
+                        <td>Hors ligne</td>
+                        <td>
+                            <a href="#">
+                                <img src="image/icons/detail.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="image/icons/edit.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="image/icons/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Chaussons héro</td>
+                        <td>21,99€</td>
+                        <td>-20%</td>
+                        <td>17,59€</td>
+                        <td>Enfants</td>
+                        <td>Bleu, Gris</td>
+                        <td>En ligne</td>
+                        <td>
+                            <a href="#">
+                                <img src="image/icons/detail.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="image/icons/edit.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="image/icons/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Table navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+</body>
+</html>
